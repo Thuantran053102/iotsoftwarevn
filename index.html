@@ -1,0 +1,676 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    @import url('https://fonts.google.com/specimen/Gamja+Flower?query=gamja');
+    html,body{
+        margin: 0;
+        padding: 0;
+        font-family:"Gamja Flower";
+    }
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    li{
+        list-style: none;
+    }
+    #toheader{
+        background-color: rgba(71, 75, 75, 0.5);
+        border-bottom: 1px solid rgb(255, 255, 255)  ;
+        
+    }
+    .collapse .nav-item a , .navbar-brand i, .collapse .nav i, .navbar-toggler  i{
+        color: rgba(255, 255, 255, 0.966) !important;
+        font-weight: 800;
+    }
+    .my-icon{
+        display: flex;
+    }
+    .navbar-toggler{
+        border: none;
+    }
+    .collapse .nav-item a:hover ,.my-icon i:hover , .navbar-brand i:hover  {
+        transition: transform 1s ;
+        transform: scale(1.25);
+        color: rgb(255, 255, 255) !important;
+      
+    }
+    .navbar-brand i:hover , .navbar-toggler  i:hover{
+        transition: transform 0.5s;
+        transform: rotate(90deg) scale(1.25);
+        color: rgb(253, 253, 253) !important;
+    }
+    .sticky #toheader{
+        background-color: #fff !important;
+        opacity: 0.75;
+    }
+    .sticky  .nav-item a , .sticky  .navbar-brand i, .sticky  .nav i{
+        color: rgb(2, 2, 2) !important;
+    }
+    .sticky  .nav-item a:hover , .sticky  .navbar-brand i:hover, .sticky  .nav i:hover{
+        color: rgb(2, 2, 2) !important;
+    }
+
+    .carousel-caption{
+        position: absolute;
+        top: 30%;
+        transition: tr 1s;
+    }
+    .carousel-caption h1:hover{
+        transform: translate(0px,50px);
+        transition: transform 1s;
+    } 
+    #carousel-caption1 h1:hover{
+        transform: translate(0px,50px);
+        transition: transform 1s;
+    }
+    #carousel-caption1 h1{
+        background-color: rgb(93, 94, 87);
+    }
+    .carousel-caption h1{
+        
+        text-shadow: 5px 5px 25px rgb(7, 6, 6) ;
+    }
+    @media(max-width: 1025px)
+    {
+        p{
+            font-size: 13px;
+        }
+    }
+    @media(max-width: 990px)
+    {
+        .logo ul{
+           display: flex;
+           justify-content: space-around;
+        }
+    }
+    @media(max-width: 768px)
+    {
+        #gioithieuh1{
+            font-size:30px ;
+        }
+        p{
+            font-size: 12px;
+        }
+        .logo {
+            font-size: 15px !important;
+            list-style:none;
+            margin:0 10;
+            padding:0;
+            text-align:center;
+        }
+        .navbar-brand i 
+        {
+            font-size: 25px !important;
+        }
+        .navbar-toggler  i 
+        {
+            font-size: 15px !important;
+        }
+        .nav .nav-item a{
+            font-size: 18px !important;
+        }
+       
+        
+        
+    }
+    @media(max-width: 536px)
+    {
+        .carousel-caption .display-2 , .carousel-caption .display-1{
+        font-size: 23px !important;
+        text-shadow: 5px 5px 25px rgb(7, 6, 6) ;
+        }
+        .sticky  .nav-item a , .sticky  .navbar-brand i, .sticky  .nav i{
+        font-size: 20px;
+        }
+        .navbar-brand i 
+        {
+            font-size: 25px !important;
+        }
+        .navbar-toggler  i 
+        {
+            font-size: 25px !important;
+        }
+        .nav .nav-item a{
+            font-size: 15px !important;
+        }
+        .logo i{
+            font-size: 20px !important;
+        }
+       
+ 
+    }
+    @media(max-width: 480px)
+    {
+        .carousel-caption .display-2 , .carousel-caption .display-1{
+        font-size: 23px !important;
+        text-shadow: 5px 5px 25px rgb(7, 6, 6) ;
+        }
+        .sticky  .nav-item a , .sticky  .navbar-brand i, .sticky  .nav i{
+        font-size: 20px;
+        }
+        .navbar-brand i 
+        {
+            font-size: 25px !important;
+        }
+        .navbar-toggler  i 
+        {
+            font-size: 25px !important;
+        }
+        .nav .nav-item a{
+            font-size: 12px !important;
+        }
+        .logo i{
+            font-size: 13px !important;
+        }
+       
+ 
+    }
+    @media(max-width: 420px)
+    {
+        p{
+            font-size: 15px;
+        }
+        .carousel-caption .display-2 , .carousel-caption .display-1{
+        font-size: 23px !important;
+        text-shadow: 5px 5px 25px rgb(7, 6, 6) ;
+        }
+        .sticky  .nav-item a , .sticky  .navbar-brand i, .sticky  .nav i{
+        font-size: 25px;
+        }
+        .navbar-brand i 
+        {
+            font-size: 20px !important;
+        }
+        .navbar-toggler  i 
+        {
+            font-size: 18px !important;
+        }
+        .nav .nav-item a{
+            font-size: 10px !important;
+        }
+        .logo i{
+            font-size: 10px !important;
+            margin-left:300%;
+        }
+        .carousel-indicators{
+            margin-left: 37%;
+            width: 80px;
+            height: 4px;
+        }
+        .carousel-control-prev-icon ,.carousel-control-next-icon {
+            width: 1rem !important;
+            height: 1rem !important;
+        }
+
+    }
+    @media(max-width:414px)
+    {
+        #gioithieuh1{
+            font-size:30px ;
+        }
+        p{
+            font-size: 13px;
+        }
+        section.module.parallax h1 {
+            font-size: 35px !important;
+            line-height: 1;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px white;
+        }
+    }
+   
+    @media(max-width: 375px)
+    {
+       
+        #gioithieuh1{
+            font-size:28px ;
+        }
+        p{
+            font-size: 12px !important;
+        }
+        .nav .nav-item a{
+            font-size: 9px !important;
+        }
+        section.module.parallax h1 {
+            font-size: 32px !important;
+            line-height: 1;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px white;
+        }
+       
+        
+    }
+    @media(max-width: 380px)
+    {   
+        p{
+            font-size: 11px !important;
+        }
+        .logo i{
+            font-size: 10px !important;
+            margin-left:230%;
+        }
+        .navbar-brand i 
+        {
+            font-size: 16px !important;
+        }
+        .navbar-toggler  i 
+        {
+            font-size: 15px !important;
+        }
+        .nav .nav-item a{
+            font-size: 6px !important;
+        } 
+    }
+    @media(max-width: 320px)
+    {   
+        #gioithieuh1{
+            font-size:26px ;
+        }
+        p{
+            font-size: 10.5px !important;
+        }
+        section.module.parallax h1 {
+            font-size: 30px !important;
+            line-height: 1;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px white;
+        }
+    }
+    @media(max-width: 301px)
+    {
+        .logo i{
+            font-size: 10px !important;
+            margin-left:230%;
+        }
+        .navbar-brand i 
+        {
+            font-size: 16px !important;
+        }
+        .navbar-toggler  i 
+        {
+            font-size: 15px !important;
+        }
+        .nav .nav-item a{
+            font-size: 4px !important;
+        } 
+    }
+    .row{
+         margin-top: 0;    
+        justify-content: space-around;
+        line-height: 2.5;
+    }
+    #gioithieu{
+        font-family: cursive;
+        color: chocolate !important;
+    }
+    #content-left  {
+        padding: 0px 10px;
+        display: block;
+        padding-top: 6%;
+    }
+    #content-left p{
+        display: block;
+        justify-content: space-between;   
+    }
+    #popular-destinations img {
+    transition: transform 0.5s, filter 0.75s;
+    }
+    #popular-destinations a:hover img {
+        transform: scale(1.25);
+        filter: none;
+    } 
+    #content{
+        width: 100% !important;
+        padding-top: 50px ;
+        background-color: white;
+        margin: 0px 5px;
+        text-align: center;
+    }
+    #content-right img {        
+        transition: transform 0.5s, filter 0.75s;
+    }
+    #content-right a:hover img {
+        transform: scale(1.25);
+        filter: none;
+    }
+    .img-fluid , #content-right :hover  {
+        border-radius: 10px 10px;
+    }
+    
+    section.module:last-child {
+  margin-bottom: 0;
+}
+
+section.module p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
+}
+section.module p:last-child {
+  margin-bottom: 0;
+}
+section.module.content {
+  padding: 40px 0;
+  background-color: rgba(207,216,220,0.5);
+}
+section.module.content:last-child {
+  margin-bottom: 60px;
+}
+section.module.parallax {
+  padding: 240px 0;
+  background-position: 0 0;
+}
+section.module.parallax h1 {
+  color: #fcfcfc;
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px white;
+}
+section.module.parallax-1 {
+  background-image: url("https://images.unsplash.com/photo-1444723121867-7a241cacace9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+    max-height: 480px !important;
+  background-color: rgba(32, 124, 216, 0.4);
+  background-blend-mode: screen;
+}
+.dichvu{
+    padding: 50px 50px;
+    text-align: center;
+}
+.dichvu h1{
+    color: rgb(85, 73, 66);
+}
+.content2.contentimg{
+    padding: 0px 0px;
+    margin: 0px 0px;
+}
+.content2.contentimg.card{
+    width: 25rem ;
+}
+
+
+.card img {
+  transition: transform 0.5s, filter 0.75s;
+}
+
+.card:hover img {
+  transform: scale(1.25);
+}
+.card-body-3 p{
+    font-size:14px !important ;
+}
+#footer{
+    
+    background-color: rgb(22, 22, 29);
+}
+#footer .row{
+    padding: 50px;
+}
+#footer p , #footer h2{
+    color: rgb(255, 255, 255);
+}
+#footer p {
+    font-size: 15px;
+}
+#end{
+    height: 80px;
+    background-color: rgb(8, 8, 8);
+}
+.logo-end{
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+  
+</style>
+</head>
+<body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="toheader">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <i class="fa fa-gg" style="font-size:36px;color: rgb(136, 121, 121)"></i>
+                    </div>
+                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapse">
+                        <i class="fa fa-connectdevelop" id="fa-menu" style="font-size:24px"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapse">
+                        <ul class="nav navbar mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Trang Chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Thông Tin</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Dịch Vụ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tin Tức</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Liên Hệ</a>
+                            </li>
+                        </ul>
+                            <ul class=" nav my-icon ms-auto logo">
+                                <li class="nav-item">
+                                    <i class="nav-link fa fa-firefox" style="font-size:24px;color: rgb(136, 121, 121);"></i>
+                                </li>
+                                <li class="nav-item">
+                                    <i class=" nav-link fa fa-facebook" style="font-size:24px;color: rgb(136, 121, 121);"></i>
+                                </li>
+                                <li class="nav-item">
+                                    <i class=" nav-link fa fa-twitter" style="font-size:24px;color: rgb(136, 121, 121);"></i>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--carousel-->
+            <!--carousel slides mặc định -->
+            
+                <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+                    <ul class="carousel-indicators">
+                        <li data-bs-target="#mycarousel" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#mycarousel" data-bs-slide-to="1" ></li>
+                        <li data-bs-target="#mycarousel" data-bs-slide-to="2"></li>
+                    </ul>
+                     <div class="carousel-inner" >
+                        <div class="carousel-item active">
+                            <img data-bs-target="#mycarousel" class="d-block w-100" src="https://images.pexels.com/photos/326501/pexels-photo-326501.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="first-img">
+                            <div class="carousel-caption" id="carousel-caption1">
+                                <h1 class="display-2">Digital tranformation</h1>
+                            </div>
+                        </div>  
+                        <div class="carousel-item">
+                            <img data-bs-target="#mycarousel" class="d-block w-100" src="https://images.pexels.com/photos/3184460/pexels-photo-3184460.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="first-img">
+                            <div class="carousel-caption" id="carousel-caption2">
+                                <h1 class="display-1">Solution for</h1>
+                                <h1 class="display-2">odoo</h1>
+                                <h1 class="display-2">ERP</h1>
+                            </div>
+                        </div>  
+                        <div class="carousel-item">
+                            <img data-bs-target="#mycarousel" class="d-block w-100" src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="first-img">
+                            <div class="carousel-caption" id="carousel-caption2">
+                                <h1 class="display-2">Triển Khai Hệ THống Máy Chủ</h1>
+                            </div>
+                        </div>  
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#mycarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#mycarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                    </button>
+                </div>
+        </header>
+        <main>
+            <div class="container-fluid"id="content">
+                <div class="row" >
+                    <div class="col-12 col-md-6 col-lg-5"id="content-left">
+                        <h2 id="gioithieu">Giới THiệu</h2>
+                            <h1 id="gioithieuh1">IOT SOFTWARE</h1>
+                            <p>
+                               Được thành lập bởi các chuyên gia với nhiều năm kinh nghiệm 
+                            </p>
+                            <p>
+                                chuyên ngành.IOT Software VN được thành lập để đáp ứng nhu
+                             </p>
+                             <p>
+                                cầu về lĩnh vực CNTT của khu vực...
+                             </p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-5 popular-destinatins py-5" id="content-right">
+                        <a href="" class="text-white">
+                            <figure class="position-relative overflow-hidden">
+                                <img class="img-fluid" src="https://images.pexels.com/photos/936722/pexels-photo-936722.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Edinburgh">
+                                <figcaption class="d-flex align-items-center justify-content-center position-absolute">
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <section id="trangchu" class="module parallax parallax-1" data-type="background" data-speed="10">
+                <div class="parallax-container">
+                    <h1>IOTSOFT</h1>
+                </div>
+            </section> 
+            <caption>
+                <div class="container-fluid dichvu">
+                    <h2 class="display-6" id="gioithieu">Dịch Vụ</h2>
+                    <h1 class="display-3" >CHÚNG TÔI NHẬN PHÁT TRIỂN PHẦN MỀM/APPS</h1>
+                </div>
+            </caption>
+            <div class="container-fluid"id="content2">
+                <div class="row" >
+                    <div class="col-12 col-md-6 col-lg-4"id="contentimg">
+                        <div class="card" >
+                            <a href="" class="text-white">
+                                <figure class="position-relative overflow-hidden">
+                                  <img class="img-fluid" src="https://www.iotsoftvn.com/data/ngoc/images/rsz_111.jpg" alt="Edinburgh">
+                                  <figcaption class="d-flex align-items-center justify-content-center position-absolute">
+                                  </figcaption>
+                                </figure>
+                            </a>
+                            <div class="card-body" id="card-body-1">
+                                <h2 class="display-7">ỨNG DỤNG BẢO MẬT SẢN PHẨM (SECURITY PITURE)</h2>
+                              <p class="card-text">là một ứng dụng cho các doang nghiệp, 
+                                  nhà Máy để hỗ trợ cho việc bảo mật, giám sát, báo cáo khi 
+                                  có sự cố trong hệ thống sản cuất và vận hành một cách nhanh chóng và hiệu quả</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4" id="contentimg">
+                        <div class="card">
+                            <a href="" class="text-white">
+                                <figure class="position-relative overflow-hidden">
+                                  <img class="img-fluid" src="https://www.iotsoftvn.com/data/ngoc/images/rsz_e-learning-2.jpg" alt="Edinburgh">
+                                  <figcaption class="d-flex align-items-center justify-content-center position-absolute">
+                                  </figcaption>
+                                </figure>
+                            </a>
+                            <div class="card-body"id="card-body-2">
+                                <h2>HỆ THỐNG QUẢN LÝ HỌC TẬP TRỰC TUYẾN(E-LEARNING)</h2>
+                              <p class="card-text">Được phát triển và xây dựng bởi công ty 
+                                  IOT Software với đầy đủ cacstinhs năng đa dạng như quản 
+                                  lý khóa học, giảng viên , học sinh...</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-md-8 col-lg-4" id="contentimg">
+                        <div class="card">
+                            <a href="" class="text-white">
+                                <figure class="position-relative overflow-hidden">
+                                  <img class="img-fluid" src="https://www.iotsoftvn.com/data/ngoc/images/rsz_22.png" alt="Edinburgh">
+                                  <figcaption class="d-flex align-items-center justify-content-center position-absolute">
+                                  </figcaption>
+                                </figure>
+                            </a>
+                            <div class="card-body" id="card-body-3">
+                                <h2 class="display-10">HỆ THỐNG QUẢN LÝ BÁN HÀNG(CRM - SALES MANAGERMENT)</h2>
+                              <p class="card-text">Phần mềm hỗ trợ doanh nghiệp, cá nhân
+                                  trong việc quản lý các phân đoạn bán hàng như: nhập hàng, xuất hàng
+                                  , quản lý hàng hóa, quản lý kho, quản lý đơn hàng, chăm xóc khách hàng....
+                              </p>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container-fluid" id="footer">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <h2> Liên Hệ</h1>
+                        <p > Công ty TNHH giải pháp Công Nghệ Phần mềm kết nối số Việt Nam IOT Software</p>
+                        <p> Mã số thuế: 3603552207</p>
+                        <p>Trụ sở Công ty: 9/9 Tổ 18C, Khu phố 3, Phường Bửu Long, TP. Biên Hòa, Đồng Nai.</p>
+                        <p>Văn phòng đại diện: H1/3 Cư xá A42, Kp 6, Đường Nguyễn Ái Quốc, Biên Hòa, Đồng Nai</p>
+                        <p> 097 893 87 60</p>
+                        <p> info@iotsoftvn.com</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <h2>TIN TỨC CÔNG NGHỆ</h1>
+                        <p> Inventory Odoo ERP – Module quản lý kho hàng</p>
+                        <p> RFID trong quản lý kho</p>
+                        <p>Đến năm 2020 sẽ có 1 triệu thiết bị kết nối IoT được bán ra mỗi ngày, 40% hoạt động trên di động của con người sẽ do trợ lý ảo thực hiện</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <h2>KHÁCH HÀNG</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid" id="end">
+                <ul class="logo-end">
+                    <li class="item">
+                        <i class="fa fa-firefox" style="font-size:24px;color: rgb(136, 121, 121);"></i>
+                    </li>
+                    <li class="item">
+                        <i class="fa fa-facebook" style="font-size:24px;color: rgb(136, 121, 121);"></i>
+                    </li>
+                    <li class="nitem">
+                        <i class="fa fa-twitter" style="font-size:24px;color: rgb(136, 121, 121);"></i>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                    $("header").addClass("sticky")
+                }
+                else{
+                    $("header").removeClass("sticky")
+                }
+            }) 
+        })
+    </script>
+</body>
+</html>
